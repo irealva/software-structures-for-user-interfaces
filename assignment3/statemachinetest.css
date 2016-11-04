@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.description {
+    width: 500px;
+}
+
+#game {
+    border-style: solid;
+    border-width: 2px;
+}
+
+#fire {
+    margin: 10px;
+}
