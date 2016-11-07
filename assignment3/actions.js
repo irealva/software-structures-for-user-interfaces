@@ -41,8 +41,17 @@ var Actions = (function() {
          * Move the character to the x, y coordinates of the corresponding event
          */
         followEventPosition: function(event, params, actor) {
-            var x = event.offsetX;
-            var y = event.offsetY;
+            var x = 0;
+            var y = 0;
+
+            if (actor.parent.dragFocus != null) {
+                x = event.offsetX - actor.width / 2;
+                y = event.offsetY - actor.height / 2;
+            }
+            else {
+                x = event.offsetX;
+                y = event.offsetY;
+            }
 
             actor.x = x;
             actor.y = y;

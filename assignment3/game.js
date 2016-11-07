@@ -240,8 +240,8 @@ Game.prototype.onDraw = function() {
  */
 Game.prototype.requestDragFocus = function(actor, x, y) {
     this.dragFocus = actor;
-    this.grabPointX = x;
-    this.grabPointY = y;
+    this.grabPointX = x ;
+    this.grabPointY = y ;
 }
 
 /**
