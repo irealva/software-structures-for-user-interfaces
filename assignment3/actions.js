@@ -11,7 +11,9 @@ var Actions = (function() {
         changeImg: function(event, params, actor) {
             if (params != null) {
                 actor.img = params.img;
-            } else {
+                actor.parent.damageActor();
+            }
+            else {
                 actor.img = null;
                 actor.parent.damageActor();
             }
@@ -25,6 +27,10 @@ var Actions = (function() {
         moveTo: function(event, params, actor) {
             actor.x = params.targetAbsoluteX;
             actor.y = params.targetAbsoluteY;
+        },
+        moveRandom: function(event, params, actor) {
+            actor.x = getRandomIntInclusive(0, 350);
+            actor.y = getRandomIntInclusive(0, 350);
         },
         /**
          * Moves the character by the increment specified by x and y, relative to

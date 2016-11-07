@@ -15,6 +15,11 @@ function Game(canvas) {
     canvas.addEventListener("mousedown", this.mousedown.bind(this));
     canvas.addEventListener("mouseup", this.mouseup.bind(this));
     canvas.addEventListener("mousemove", this.mousemove.bind(this));
+
+    /* Small change to make my own game version work */
+    this.constantAnim = [];
+
+
 };
 
 Game.prototype.mousedown = function(event) {
